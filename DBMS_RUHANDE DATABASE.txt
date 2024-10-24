@@ -1,0 +1,170 @@
+
+mysql> CREATE DATABASE RUHANDE;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use ruhande;
+Database changed
+mysql> create table NGOMA(ID INT(9),F_NAME varchar(20),L_NAME varchar(20),PROVINCE varchar(15),DISTRICT varchar(15),sector varchar(15),CELL varchar(15),ID_NUM int(16),TEL_NUM varchar(15));
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql> select*from ngoma;
+Empty set (0.00 sec)
+
+mysql> insert into ngoma values(1,"RUKUNDO","Pacifique","North",Gicumbi","Kaniga","Mulindi","1119200022222323,0785956701"),(2,"MUGISHA","Peter","West",Karogni^C"Kaniga","Mulindi","1119200022222323,0785956701");
+mysql> create table NGOMA(ID INT(9),F_NAME varchar(20),L_NAME varchar(20),GENDER varchar(6),PROVINCE varchar(15),DISTRICT varchar(15),SECTOR varchar(15),CELL varchar(15),ID_NUM int(16),TEL_NUM varchar(15),EMAIL varchar(30));
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql>  insert into ngoma values(1,"RUKUNDO","Pacifique","M","North",Gicumbi","Kaniga","Mulindi","1119200022222323,"0785956701","paciruku123@gmail.com"),(2,"MUGISHA","Peter","M","West",Karogni","Kaniga","Mulindi","1119200022222323,0785956701","petmugi23@gmail.com");
+    ">  insert into ngoma values(1,"RUKUNDO","Pacifique","M","North",Gicumbi","Kaniga","Mulindi","1119200022222323,"0785956701","paciruku123@gmail.com"),(2,"MUGISHA","Peter","M","West",Karogni","Kaniga","Mulindi","1119200022222323,0785956701","petmugi23@gmail.com");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '","Kaniga","Mulindi","1119200022222323,"0785956701","paciruku123@gmail.com"),(2,' at line 1
+mysql>  insert into ngoma values(1,"RUKUNDO","Pacifique","M","North",Gicumbi","Kaniga","Mulindi","1119200022222323,"0785956701","paciruku123@gmail.com");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '","Kaniga","Mulindi","1119200022222323,"0785956701","paciruku123@gmail.com")' at line 1
+mysql>  insert into ngoma values(1,"RUKUNDO","Pacifique","M","North",Gicumbi","Kaniga","Mulindi",1119200022222323,0785956701,"paciruku123@gmail.com"),(2,"MUGISHA","Peter","M","West",Karongi","Rubengera","Bishogwe",1119200022222323,0785956701,"petmugi23@gmail.com");;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '","Kaniga","Mulindi",1119200022222323,0785956701,"paciruku123@gmail.com"),(2,"MU' at line 1
+ERROR:
+No query specified
+
+mysql> selecct*from ngoma;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selecct*from ngoma' at line 1
+mysql>  insert into ngoma values(1,"RUKUNDO","Pacifique","M","North","Gicumbi","Kaniga","Mulindi",1119200022222323,0785956701,"paciruku123@gmail.com"),(2,"MUGISHA","Peter","M","West","Karongi","Rubengera","Bishogwe",1119200022222323,0785956701,"petmugi23@gmail.com");;
+Query OK, 2 rows affected, 2 warnings (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 2
+
+ERROR:
+No query specified
+
+mysql> selecct*from ngoma;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selecct*from ngoma' at line 1
+mysql> select*from ngoma;
++------+---------+-----------+--------+----------+----------+-----------+----------+------------+-----------+-----------------------+
+| ID   | F_NAME  | L_NAME    | GENDER | PROVINCE | DISTRICT | SECTOR    | CELL     | ID_NUM     | TEL_NUM   | EMAIL                 |
++------+---------+-----------+--------+----------+----------+-----------+----------+------------+-----------+-----------------------+
+|    1 | RUKUNDO | Pacifique | M      | North    | Gicumbi  | Kaniga    | Mulindi  | 2147483647 | 785956701 | paciruku123@gmail.com |
+|    2 | MUGISHA | Peter     | M      | West     | Karongi  | Rubengera | Bishogwe | 2147483647 | 785956701 | petmugi23@gmail.com   |
++------+---------+-----------+--------+----------+----------+-----------+----------+------------+-----------+-----------------------+
+2 rows in set (0.00 sec)
+
+mysql>  insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),^C
+mysql> select*from level2;
+ERROR 1146 (42S02): Table 'ruhande.level2' doesn't exist
+mysql> insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"delicemuh23@gmail.com"),
+    -> insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South,"Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"jaquesgisubizo3@gmail.com");
+    ">  insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South,"Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"costasienem123@gmail.com");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gik' at line 2
+mysql>  insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South,"Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"costasienem123@gmail.com");
+    ">
+    ">  insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South,"Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"costasienem123@gmail.com");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8' at line 1
+mysql>  insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South,"Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"costasienem123@gmail.com");
+    ">  insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South,"Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"costasienem123@gmail.com");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8' at line 1
+mysql>  insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South,"Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"costasienem123@gmail.com");
+    ">  insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South,"Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"costasienem123@gmail.com");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8' at line 1
+mysql> insert into ngoma values(3,"UWAMAHORO","Anitha","F","Kigali city","Gikondo","Gikondo","Mugende",1234567892345621,0785956704,"anithuwama23@gmail.com"),(4,"CYUZUZO","Providence","F","South","Huye","Ngoma","Rango A",111920002222223,078595674,"provcyuzu23@gmail.com"),(5,"MUHOZA","Delice","F","South","Muhanga","Gahogo","Mugende",111921002222223,078595634,"delicemuh23@gmail.com"),(6,"GISUBIZO","Jacques","M","East","Rwamagana","Rwerere","Kinoni",11192123222223,078595634,"jaquesgisubizo3@gmail.com"),(7,"DUSHIME","Rahab","F","South","Ruhango","Mirenge","Ntenyo",11192123224563,0785695634,"rahdushim3@gmail.com"),(8,"NIYERA","Peline","F","East","Kayonza","Mukarange","Kayonza",11192123334223,078455634,"niyerapelin3@gmail.com"),(9,"MUJA","Esperance","F","North","Burera","Gahunga","Nyangwe",111920043222223,0785669534,"espemuja3@gmail.com"),(10,"NEMA","Costasie","F","North","Gakenke","Nemba","Mukoto",11142366223,078595634,"costasienem123@gmail.com");
+Query OK, 8 rows affected, 8 warnings (0.01 sec)
+Records: 8  Duplicates: 0  Warnings: 8
+
+mysql> selecct*from ngoma;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selecct*from ngoma' at line 1
+mysql> select*from ngoma;
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+| ID   | F_NAME    | L_NAME     | GENDER | PROVINCE    | DISTRICT  | SECTOR    | CELL     | ID_NUM     | TEL_NUM   | EMAIL                     |
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+|    1 | RUKUNDO   | Pacifique  | M      | North       | Gicumbi   | Kaniga    | Mulindi  | 2147483647 | 785956701 | paciruku123@gmail.com     |
+|    2 | MUGISHA   | Peter      | M      | West        | Karongi   | Rubengera | Bishogwe | 2147483647 | 785956701 | petmugi23@gmail.com       |
+|    3 | UWAMAHORO | Anitha     | F      | Kigali city | Gikondo   | Gikondo   | Mugende  | 2147483647 | 785956704 | anithuwama23@gmail.com    |
+|    4 | CYUZUZO   | Providence | F      | South       | Huye      | Ngoma     | Rango A  | 2147483647 | 78595674  | provcyuzu23@gmail.com     |
+|    5 | MUHOZA    | Delice     | F      | South       | Muhanga   | Gahogo    | Mugende  | 2147483647 | 78595634  | delicemuh23@gmail.com     |
+|    6 | GISUBIZO  | Jacques    | M      | East        | Rwamagana | Rwerere   | Kinoni   | 2147483647 | 78595634  | jaquesgisubizo3@gmail.com |
+|    7 | DUSHIME   | Rahab      | F      | South       | Ruhango   | Mirenge   | Ntenyo   | 2147483647 | 785695634 | rahdushim3@gmail.com      |
+|    8 | NIYERA    | Peline     | F      | East        | Kayonza   | Mukarange | Kayonza  | 2147483647 | 78455634  | niyerapelin3@gmail.com    |
+|    9 | MUJA      | Esperance  | F      | North       | Burera    | Gahunga   | Nyangwe  | 2147483647 | 785669534 | espemuja3@gmail.com       |
+|   10 | NEMA      | Costasie   | F      | North       | Gakenke   | Nemba     | Mukoto   | 2147483647 | 78595634  | costasienem123@gmail.com  |
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma add column NATIONALITY varchar(20);
+Query OK, 10 rows affected (0.08 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select*from ngoma;
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+-------------+
+| ID   | F_NAME    | L_NAME     | GENDER | PROVINCE    | DISTRICT  | SECTOR    | CELL     | ID_NUM     | TEL_NUM   | EMAIL                     | NATIONALITY |
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+-------------+
+|    1 | RUKUNDO   | Pacifique  | M      | North       | Gicumbi   | Kaniga    | Mulindi  | 2147483647 | 785956701 | paciruku123@gmail.com     | NULL        |
+|    2 | MUGISHA   | Peter      | M      | West        | Karongi   | Rubengera | Bishogwe | 2147483647 | 785956701 | petmugi23@gmail.com       | NULL        |
+|    3 | UWAMAHORO | Anitha     | F      | Kigali city | Gikondo   | Gikondo   | Mugende  | 2147483647 | 785956704 | anithuwama23@gmail.com    | NULL        |
+|    4 | CYUZUZO   | Providence | F      | South       | Huye      | Ngoma     | Rango A  | 2147483647 | 78595674  | provcyuzu23@gmail.com     | NULL        |
+|    5 | MUHOZA    | Delice     | F      | South       | Muhanga   | Gahogo    | Mugende  | 2147483647 | 78595634  | delicemuh23@gmail.com     | NULL        |
+|    6 | GISUBIZO  | Jacques    | M      | East        | Rwamagana | Rwerere   | Kinoni   | 2147483647 | 78595634  | jaquesgisubizo3@gmail.com | NULL        |
+|    7 | DUSHIME   | Rahab      | F      | South       | Ruhango   | Mirenge   | Ntenyo   | 2147483647 | 785695634 | rahdushim3@gmail.com      | NULL        |
+|    8 | NIYERA    | Peline     | F      | East        | Kayonza   | Mukarange | Kayonza  | 2147483647 | 78455634  | niyerapelin3@gmail.com    | NULL        |
+|    9 | MUJA      | Esperance  | F      | North       | Burera    | Gahunga   | Nyangwe  | 2147483647 | 785669534 | espemuja3@gmail.com       | NULL        |
+|   10 | NEMA      | Costasie   | F      | North       | Gakenke   | Nemba     | Mukoto   | 2147483647 | 78595634  | costasienem123@gmail.com  | NULL        |
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma drop nationality;
+Query OK, 10 rows affected (0.07 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select*from ngoma;
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+| ID   | F_NAME    | L_NAME     | GENDER | PROVINCE    | DISTRICT  | SECTOR    | CELL     | ID_NUM     | TEL_NUM   | EMAIL                     |
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+|    1 | RUKUNDO   | Pacifique  | M      | North       | Gicumbi   | Kaniga    | Mulindi  | 2147483647 | 785956701 | paciruku123@gmail.com     |
+|    2 | MUGISHA   | Peter      | M      | West        | Karongi   | Rubengera | Bishogwe | 2147483647 | 785956701 | petmugi23@gmail.com       |
+|    3 | UWAMAHORO | Anitha     | F      | Kigali city | Gikondo   | Gikondo   | Mugende  | 2147483647 | 785956704 | anithuwama23@gmail.com    |
+|    4 | CYUZUZO   | Providence | F      | South       | Huye      | Ngoma     | Rango A  | 2147483647 | 78595674  | provcyuzu23@gmail.com     |
+|    5 | MUHOZA    | Delice     | F      | South       | Muhanga   | Gahogo    | Mugende  | 2147483647 | 78595634  | delicemuh23@gmail.com     |
+|    6 | GISUBIZO  | Jacques    | M      | East        | Rwamagana | Rwerere   | Kinoni   | 2147483647 | 78595634  | jaquesgisubizo3@gmail.com |
+|    7 | DUSHIME   | Rahab      | F      | South       | Ruhango   | Mirenge   | Ntenyo   | 2147483647 | 785695634 | rahdushim3@gmail.com      |
+|    8 | NIYERA    | Peline     | F      | East        | Kayonza   | Mukarange | Kayonza  | 2147483647 | 78455634  | niyerapelin3@gmail.com    |
+|    9 | MUJA      | Esperance  | F      | North       | Burera    | Gahunga   | Nyangwe  | 2147483647 | 785669534 | espemuja3@gmail.com       |
+|   10 | NEMA      | Costasie   | F      | North       | Gakenke   | Nemba     | Mukoto   | 2147483647 | 78595634  | costasienem123@gmail.com  |
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from ngoma where gender="M" or province="north";
++------+----------+-----------+--------+----------+-----------+-----------+----------+------------+-----------+---------------------------+
+| ID   | F_NAME   | L_NAME    | GENDER | PROVINCE | DISTRICT  | SECTOR    | CELL     | ID_NUM     | TEL_NUM   | EMAIL                     |
++------+----------+-----------+--------+----------+-----------+-----------+----------+------------+-----------+---------------------------+
+|    1 | RUKUNDO  | Pacifique | M      | North    | Gicumbi   | Kaniga    | Mulindi  | 2147483647 | 785956701 | paciruku123@gmail.com     |
+|    2 | MUGISHA  | Peter     | M      | West     | Karongi   | Rubengera | Bishogwe | 2147483647 | 785956701 | petmugi23@gmail.com       |
+|    6 | GISUBIZO | Jacques   | M      | East     | Rwamagana | Rwerere   | Kinoni   | 2147483647 | 78595634  | jaquesgisubizo3@gmail.com |
+|    9 | MUJA     | Esperance | F      | North    | Burera    | Gahunga   | Nyangwe  | 2147483647 | 785669534 | espemuja3@gmail.com       |
+|   10 | NEMA     | Costasie  | F      | North    | Gakenke   | Nemba     | Mukoto   | 2147483647 | 78595634  | costasienem123@gmail.com  |
++------+----------+-----------+--------+----------+-----------+-----------+----------+------------+-----------+---------------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from ngoma where gender="M" and province="north";
++------+---------+-----------+--------+----------+----------+--------+---------+------------+-----------+-----------------------+
+| ID   | F_NAME  | L_NAME    | GENDER | PROVINCE | DISTRICT | SECTOR | CELL    | ID_NUM     | TEL_NUM   | EMAIL                 |
++------+---------+-----------+--------+----------+----------+--------+---------+------------+-----------+-----------------------+
+|    1 | RUKUNDO | Pacifique | M      | North    | Gicumbi  | Kaniga | Mulindi | 2147483647 | 785956701 | paciruku123@gmail.com |
++------+---------+-----------+--------+----------+----------+--------+---------+------------+-----------+-----------------------+
+1 row in set (0.00 sec)
+
+mysql> update ngoma set gender="Male" where gender="M";
+Query OK, 3 rows affected (0.00 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select*from ngoma;
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+| ID   | F_NAME    | L_NAME     | GENDER | PROVINCE    | DISTRICT  | SECTOR    | CELL     | ID_NUM     | TEL_NUM   | EMAIL                     |
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+|    1 | RUKUNDO   | Pacifique  | Male   | North       | Gicumbi   | Kaniga    | Mulindi  | 2147483647 | 785956701 | paciruku123@gmail.com     |
+|    2 | MUGISHA   | Peter      | Male   | West        | Karongi   | Rubengera | Bishogwe | 2147483647 | 785956701 | petmugi23@gmail.com       |
+|    3 | UWAMAHORO | Anitha     | F      | Kigali city | Gikondo   | Gikondo   | Mugende  | 2147483647 | 785956704 | anithuwama23@gmail.com    |
+|    4 | CYUZUZO   | Providence | F      | South       | Huye      | Ngoma     | Rango A  | 2147483647 | 78595674  | provcyuzu23@gmail.com     |
+|    5 | MUHOZA    | Delice     | F      | South       | Muhanga   | Gahogo    | Mugende  | 2147483647 | 78595634  | delicemuh23@gmail.com     |
+|    6 | GISUBIZO  | Jacques    | Male   | East        | Rwamagana | Rwerere   | Kinoni   | 2147483647 | 78595634  | jaquesgisubizo3@gmail.com |
+|    7 | DUSHIME   | Rahab      | F      | South       | Ruhango   | Mirenge   | Ntenyo   | 2147483647 | 785695634 | rahdushim3@gmail.com      |
+|    8 | NIYERA    | Peline     | F      | East        | Kayonza   | Mukarange | Kayonza  | 2147483647 | 78455634  | niyerapelin3@gmail.com    |
+|    9 | MUJA      | Esperance  | F      | North       | Burera    | Gahunga   | Nyangwe  | 2147483647 | 785669534 | espemuja3@gmail.com       |
+|   10 | NEMA      | Costasie   | F      | North       | Gakenke   | Nemba     | Mukoto   | 2147483647 | 78595634  | costasienem123@gmail.com  |
++------+-----------+------------+--------+-------------+-----------+-----------+----------+------------+-----------+---------------------------+
+10 rows in set (0.00 sec)
+
+mysql>
